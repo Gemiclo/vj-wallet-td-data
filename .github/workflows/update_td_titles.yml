@@ -24,7 +24,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install curl-cffi
 
       - name: Fetch and generate titulos_td.json
         run: python fetch_td_titles.py
