@@ -30,7 +30,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add titulos_td.json
-          git diff --cached --quiet || \
-            git commit -m "chore: atualiza títulos TD $(date -u '+%Y-%m-%d')" && \
-            git push
+          if [ -f titulos_td.json ]; then
+            git add titulos_td.json
+            if ! git diff --cached --quiet; then
+              git commit -m "chore: atualiza títulos TD $(date -u '+%Y-%m-%d')"
+              git push
+            else
+              echo "Sem alterações."
+            fi
+          else
+            echo "titulos_td.json não foi gerado — CSV indisponível."
+          fi
