@@ -18,16 +18,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.12'
+          node-version: '20'
 
       - name: Install dependencies
-        run: pip install curl-cffi
+        run: npm install
+
+      - name: Install Chromium for Puppeteer
+        run: npx puppeteer browsers install chrome
 
       - name: Fetch and generate titulos_td.json
-        run: python fetch_td_titles.py
+        run: node fetch_td_titles.js
 
       - name: Commit if changed
         run: |
@@ -36,11 +39,11 @@ jobs:
           if [ -f titulos_td.json ]; then
             git add titulos_td.json
             if ! git diff --cached --quiet; then
-              git commit -m "chore: atualiza títulos TD $(date -u '+%Y-%m-%d')"
+              git commit -m "chore: atualiza titulos TD $(date -u '+%Y-%m-%d')"
               git push
             else
-              echo "Sem alterações."
+              echo "Sem alteracoes."
             fi
           else
-            echo "titulos_td.json não foi gerado — CSV indisponível."
+            echo "titulos_td.json nao foi gerado - CSV indisponivel."
           fi
