@@ -16,26 +16,12 @@ import sys
 from datetime import datetime, timezone
 from io import StringIO
 
-import requests
+from curl_cffi import requests  # imita fingerprint TLS do Chrome — bypassa Cloudflare
 
-# URL oficial do CSV do Tesouro Direto (sem bloqueio de servidor)
-CSV_URLS = [
-    "https://www.tesourodireto.com.br/json/br/com/b3/tesourodireto/service/api/treasurybondsfile.json",
-    "https://cdn.tesourodireto.com.br/precos_e_taxas/precos_e_taxas_bd.csv",
-]
+# URL oficial do Tesouro Direto (bloqueada para requests normais, liberada com curl_cffi)
+CSV_URL = "https://www.tesourodireto.com.br/json/br/com/b3/tesourodireto/service/api/treasurybondsfile.json"
 
 OUTPUT_FILE = "titulos_td.json"
-
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.8",
-    "Referer": "https://www.tesourodireto.com.br/",
-}
 
 
 def classify_title(name: str) -> tuple:
@@ -73,17 +59,21 @@ def parse_br_date(s: str) -> str:
 
 
 def fetch_csv() -> str:
-    """Baixa o CSV do Tesouro Direto."""
-    for url in CSV_URLS:
-        try:
-            resp = requests.get(url, headers=HEADERS, timeout=30)
-            ct = resp.headers.get("content-type", "")
-            print(f"[TD] {url} → {resp.status_code} ({ct})")
-            if resp.status_code == 200 and "text/html" not in ct:
-                print(f"[TD] Baixados {len(resp.content)} bytes")
-                return resp.text
-        except Exception as e:
-            print(f"[TD] Erro em {url}: {e}")
+    """Baixa o CSV do Tesouro Direto com impersonação de Chrome."""
+    try:
+        resp = requests.get(
+            CSV_URL,
+            impersonate="chrome124",  # fingerprint TLS real do Chrome 124
+            timeout=30,
+        )
+        ct = resp.headers.get("content-type", "")
+        print(f"[TD] {CSV_URL} → {resp.status_code} ({ct})")
+        if resp.status_code == 200 and "text/html" not in ct:
+            print(f"[TD] Baixados {len(resp.content)} bytes")
+            return resp.text
+        print(f"[TD] Resposta inesperada: {resp.text[:200]}")
+    except Exception as e:
+        print(f"[TD] Erro: {e}")
     return ""
 
 
