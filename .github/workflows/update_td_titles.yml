@@ -30,9 +30,21 @@ jobs:
         run: npx puppeteer browsers install chrome
 
       - name: Fetch and generate titulos_td.json
+        id: fetch
         run: node fetch_td_titles.js
 
+      - name: Show updated_at
+        if: always()
+        run: |
+          if [ -f titulos_td.json ]; then
+            echo "updated_at: $(node -e "console.log(require('./titulos_td.json').updated_at)")"
+            echo "titles: $(node -e "console.log(require('./titulos_td.json').titles.length)")"
+          else
+            echo "titulos_td.json nao encontrado"
+          fi
+
       - name: Commit if changed
+        if: steps.fetch.outcome == 'success'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -45,5 +57,5 @@ jobs:
               echo "Sem alteracoes."
             fi
           else
-            echo "titulos_td.json nao foi gerado - CSV indisponivel."
+            echo "titulos_td.json nao foi gerado."
           fi
