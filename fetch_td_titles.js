@@ -91,7 +91,7 @@ async function fetchTitles(attempt) {
     await page.goto(TD_PAGE, { waitUntil: 'domcontentloaded', timeout: navTimeout });
 
     // Aguarda o desafio Cloudflare resolver (tempo cresce a cada tentativa)
-    const waitMs = 4000 + attempt * 2000; // 4s, 6s, 8s
+    const waitMs = 8000 + attempt * 2000; // 10s, 12s, 14s
     console.log(`[TD] Aguardando ${waitMs}ms para resolver challenge...`);
     await sleep(waitMs);
 
