@@ -11,9 +11,10 @@ const fs = require('fs');
 
 puppeteer.use(StealthPlugin());
 
-const TD_PAGE   = 'https://www.tesourodireto.com.br/titulos/precos-e-taxas.htm';
-const TD_API    = 'https://www.tesourodireto.com.br/o/rentabilidade/investir';
-const OUTPUT_FILE = 'titulos_td.json';
+const TD_PAGE      = 'https://www.tesourodireto.com.br/titulos/precos-e-taxas.htm';
+const TD_API_BUY   = 'https://www.tesourodireto.com.br/o/rentabilidade/investir';
+const TD_API_SELL  = 'https://www.tesourodireto.com.br/o/rentabilidade/resgatar';
+const OUTPUT_FILE  = 'titulos_td.json';
 const MAX_TRIES = 3;
 
 function classifyTitle(name) {
@@ -95,19 +96,44 @@ async function fetchTitles(attempt) {
     console.log(`[TD] Aguardando ${waitMs}ms para resolver challenge...`);
     await sleep(waitMs);
 
-    // Chama a API de dentro do browser (usa os cookies da sessão)
-    console.log(`[TD] Chamando API: ${TD_API} ...`);
-    const data = await page.evaluate(async (url) => {
+    // Chama as duas APIs de dentro do browser (usa os cookies da sessão)
+    console.log(`[TD] Chamando API investir: ${TD_API_BUY} ...`);
+    const dataBuy = await page.evaluate(async (url) => {
       const resp = await fetch(url, {
         headers: { Accept: 'application/json' },
         credentials: 'include',
       });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       return resp.json();
-    }, TD_API);
+    }, TD_API_BUY);
+
+    console.log(`[TD] Chamando API resgatar: ${TD_API_SELL} ...`);
+    const dataSell = await page.evaluate(async (url) => {
+      try {
+        const resp = await fetch(url, {
+          headers: { Accept: 'application/json' },
+          credentials: 'include',
+        });
+        if (!resp.ok) return null;
+        return resp.json();
+      } catch (e) {
+        return null;
+      }
+    }, TD_API_SELL);
 
     await browser.close();
-    return parseApiResponse(data);
+
+    const fromBuy  = parseApiResponse(dataBuy);
+    const fromSell = dataSell ? parseApiResponse(dataSell) : [];
+    console.log(`[TD] investir: ${fromBuy.length} títulos | resgatar: ${fromSell.length} títulos`);
+
+    // Merge: títulos do /resgatar que não existem no /investir (por nome+vencimento)
+    const buyKeys = new Set(fromBuy.map((t) => `${t.name}|${t.maturity_date}`));
+    const extras  = fromSell.filter((t) => !buyKeys.has(`${t.name}|${t.maturity_date}`));
+    console.log(`[TD] Títulos extras do /resgatar (descontinuados): ${extras.length}`);
+    extras.forEach((t) => console.log(`  + ${t.name} (venc. ${t.maturity_date})`));
+
+    return [...fromBuy, ...extras];
 
   } catch (e) {
     await browser.close().catch(() => {});
