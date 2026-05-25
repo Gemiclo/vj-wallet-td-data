@@ -2,7 +2,8 @@ name: Update Tesouro Direto Titles
 
 on:
   schedule:
-    - cron: '47 12 * * 1-5'  # 09:47 BRT (UTC-3), segunda a sexta
+    - cron: '47 12 * * 1-5'  # 09:47 BRT (UTC-3) — snapshot de abertura
+    - cron: '47 18 * * 1-5'  # 15:47 BRT (UTC-3) — snapshot de fechamento
   workflow_dispatch:          # permite disparo manual
 
 env:
