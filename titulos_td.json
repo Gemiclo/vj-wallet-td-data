@@ -1,95 +1,95 @@
 {
-  "updated_at": "2026-08-21T19:14:03.315Z",
+  "updated_at": "2026-08-24T13:38:35.268Z",
   "titles": [
     {
       "name": "Tesouro Selic 2031",
       "subtype": "tesouro_selic",
       "indexer": "selic",
       "maturity_date": "2031-03-01",
-      "buy_rate": 0.0733,
-      "sell_rate": 0.0833,
-      "buy_pu": 19657.17,
-      "sell_pu": 19648.37
+      "buy_rate": 0.0731,
+      "sell_rate": 0.0831,
+      "buy_pu": 19667.56,
+      "sell_pu": 19648.48
     },
     {
       "name": "Tesouro Prefixado 2029",
       "subtype": "tesouro_prefixado",
       "indexer": "prefixado",
       "maturity_date": "2029-01-01",
-      "buy_rate": 14.17,
-      "sell_rate": 14.29,
-      "buy_pu": 734.02,
-      "sell_pu": 732.22
+      "buy_rate": 14.18,
+      "sell_rate": 14.3,
+      "buy_pu": 734.26,
+      "sell_pu": 732.08
     },
     {
       "name": "Tesouro Prefixado 2032",
       "subtype": "tesouro_prefixado",
       "indexer": "prefixado",
       "maturity_date": "2032-01-01",
-      "buy_rate": 14.57,
-      "sell_rate": 14.69,
-      "buy_pu": 484.9,
-      "sell_pu": 482.21
+      "buy_rate": 14.55,
+      "sell_rate": 14.67,
+      "buy_pu": 485.61,
+      "sell_pu": 482.66
     },
     {
       "name": "Tesouro Prefixado com Juros Semestrais 2037",
       "subtype": "tesouro_prefixado_juros",
       "indexer": "prefixado",
       "maturity_date": "2037-01-01",
-      "buy_rate": 14.59,
-      "sell_rate": 14.71,
-      "buy_pu": 785.8,
-      "sell_pu": 780.84
+      "buy_rate": 14.56,
+      "sell_rate": 14.68,
+      "buy_pu": 787.47,
+      "sell_pu": 782.07
     },
     {
       "name": "Tesouro IPCA+ 2032",
       "subtype": "tesouro_ipca",
       "indexer": "ipca",
       "maturity_date": "2032-08-15",
-      "buy_rate": 7.96,
-      "sell_rate": 8.08,
-      "buy_pu": 3007.31,
-      "sell_pu": 2987.53
+      "buy_rate": 8,
+      "sell_rate": 8.12,
+      "buy_pu": 3001.43,
+      "sell_pu": 2980.97
     },
     {
       "name": "Tesouro IPCA+ com Juros Semestrais 2037",
       "subtype": "tesouro_ipca_juros",
       "indexer": "ipca",
       "maturity_date": "2037-05-15",
-      "buy_rate": 7.7,
-      "sell_rate": 7.82,
-      "buy_pu": 4267.35,
-      "sell_pu": 4230.93
+      "buy_rate": 7.69,
+      "sell_rate": 7.81,
+      "buy_pu": 4271.38,
+      "sell_pu": 4233.95
     },
     {
       "name": "Tesouro IPCA+ 2040",
       "subtype": "tesouro_ipca",
       "indexer": "ipca",
       "maturity_date": "2040-08-15",
-      "buy_rate": 7.49,
-      "sell_rate": 7.61,
-      "buy_pu": 1737.24,
-      "sell_pu": 1710.51
+      "buy_rate": 7.5,
+      "sell_rate": 7.62,
+      "buy_pu": 1735.38,
+      "sell_pu": 1708.3
     },
     {
       "name": "Tesouro IPCA+ com Juros Semestrais 2045",
       "subtype": "tesouro_ipca_juros",
       "indexer": "ipca",
       "maturity_date": "2045-05-15",
-      "buy_rate": 7.49,
-      "sell_rate": 7.61,
-      "buy_pu": 4147.85,
-      "sell_pu": 4098.78
+      "buy_rate": 7.5,
+      "sell_rate": 7.62,
+      "buy_pu": 4144.65,
+      "sell_pu": 4094.73
     },
     {
       "name": "Tesouro IPCA+ 2050",
       "subtype": "tesouro_ipca",
       "indexer": "ipca",
       "maturity_date": "2050-08-15",
-      "buy_rate": 7.31,
-      "sell_rate": 7.43,
-      "buy_pu": 882.59,
-      "sell_pu": 859.4
+      "buy_rate": 7.32,
+      "sell_rate": 7.44,
+      "buy_pu": 880.82,
+      "sell_pu": 857.49
     },
     {
       "name": "Tesouro IPCA+ com Juros Semestrais 2060",
@@ -98,7 +98,7 @@
       "maturity_date": "2060-08-15",
       "buy_rate": 7.37,
       "sell_rate": 7.49,
-      "buy_pu": 3978.97,
+      "buy_pu": 3979.84,
       "sell_pu": 3920.17
     },
     {
@@ -108,7 +108,7 @@
       "maturity_date": "2049-12-15",
       "buy_rate": 7.57,
       "sell_rate": 7.69,
-      "buy_pu": 1962.33,
+      "buy_pu": 1962.77,
       "sell_pu": 1938.57
     },
     {
@@ -118,7 +118,7 @@
       "maturity_date": "2054-12-15",
       "buy_rate": 7.42,
       "sell_rate": 7.54,
-      "buy_pu": 1396.13,
+      "buy_pu": 1396.44,
       "sell_pu": 1371.51
     },
     {
@@ -126,10 +126,10 @@
       "subtype": "tesouro_renda",
       "indexer": "ipca",
       "maturity_date": "2059-12-15",
-      "buy_rate": 7.29,
-      "sell_rate": 7.41,
-      "buy_pu": 1003.3,
-      "sell_pu": 980.08
+      "buy_rate": 7.3,
+      "sell_rate": 7.42,
+      "buy_pu": 1001.55,
+      "sell_pu": 978.17
     },
     {
       "name": "Tesouro Renda+ Aposentadoria Extra 2045",
@@ -138,7 +138,7 @@
       "maturity_date": "2064-12-15",
       "buy_rate": 7.22,
       "sell_rate": 7.34,
-      "buy_pu": 719.41,
+      "buy_pu": 719.56,
       "sell_pu": 698.84
     },
     {
@@ -148,7 +148,7 @@
       "maturity_date": "2069-12-15",
       "buy_rate": 7.16,
       "sell_rate": 7.28,
-      "buy_pu": 517.64,
+      "buy_pu": 517.75,
       "sell_pu": 500.04
     },
     {
@@ -156,80 +156,80 @@
       "subtype": "tesouro_renda",
       "indexer": "ipca",
       "maturity_date": "2074-12-15",
-      "buy_rate": 7.13,
-      "sell_rate": 7.25,
-      "buy_pu": 370.79,
-      "sell_pu": 356.19
+      "buy_rate": 7.12,
+      "sell_rate": 7.24,
+      "buy_pu": 372.12,
+      "sell_pu": 357.38
     },
     {
       "name": "Tesouro Renda+ Aposentadoria Extra 2060",
       "subtype": "tesouro_renda",
       "indexer": "ipca",
       "maturity_date": "2079-12-15",
-      "buy_rate": 7.14,
-      "sell_rate": 7.26,
-      "buy_pu": 262.29,
-      "sell_pu": 250.56
+      "buy_rate": 7.13,
+      "sell_rate": 7.25,
+      "buy_pu": 263.35,
+      "sell_pu": 251.52
     },
     {
       "name": "Tesouro Renda+ Aposentadoria Extra 2065",
       "subtype": "tesouro_renda",
       "indexer": "ipca",
       "maturity_date": "2084-12-15",
-      "buy_rate": 7.14,
-      "sell_rate": 7.26,
-      "buy_pu": 186.18,
-      "sell_pu": 176.87
+      "buy_rate": 7.13,
+      "sell_rate": 7.25,
+      "buy_pu": 187.02,
+      "sell_pu": 177.63
     },
     {
       "name": "Tesouro Educa+ 2027",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2031-12-15",
-      "buy_rate": 7.93,
-      "sell_rate": 8.05,
-      "buy_pu": 3843.09,
-      "sell_pu": 3831.71
+      "buy_rate": 7.95,
+      "sell_rate": 8.07,
+      "buy_pu": 3842.11,
+      "sell_pu": 3829.82
     },
     {
       "name": "Tesouro Educa+ 2028",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2032-12-15",
-      "buy_rate": 7.97,
-      "sell_rate": 8.09,
-      "buy_pu": 3557.47,
-      "sell_pu": 3543.02
+      "buy_rate": 7.99,
+      "sell_rate": 8.11,
+      "buy_pu": 3555.9,
+      "sell_pu": 3540.62
     },
     {
       "name": "Tesouro Educa+ 2029",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2033-12-15",
-      "buy_rate": 7.96,
-      "sell_rate": 8.08,
-      "buy_pu": 3297.82,
-      "sell_pu": 3280.8
+      "buy_rate": 7.98,
+      "sell_rate": 8.1,
+      "buy_pu": 3295.77,
+      "sell_pu": 3277.98
     },
     {
       "name": "Tesouro Educa+ 2030",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2034-12-15",
-      "buy_rate": 7.94,
-      "sell_rate": 8.06,
-      "buy_pu": 3058.69,
-      "sell_pu": 3039.54
+      "buy_rate": 7.96,
+      "sell_rate": 8.08,
+      "buy_pu": 3056.22,
+      "sell_pu": 3036.36
     },
     {
       "name": "Tesouro Educa+ 2031",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2035-12-15",
-      "buy_rate": 7.91,
-      "sell_rate": 8.03,
-      "buy_pu": 2839.84,
-      "sell_pu": 2818.93
+      "buy_rate": 7.92,
+      "sell_rate": 8.04,
+      "buy_pu": 2838.77,
+      "sell_pu": 2817.2
     },
     {
       "name": "Tesouro Educa+ 2032",
@@ -238,7 +238,7 @@
       "maturity_date": "2036-12-15",
       "buy_rate": 7.86,
       "sell_rate": 7.98,
-      "buy_pu": 2642.06,
+      "buy_pu": 2642.68,
       "sell_pu": 2619.69
     },
     {
@@ -248,7 +248,7 @@
       "maturity_date": "2037-12-15",
       "buy_rate": 7.79,
       "sell_rate": 7.91,
-      "buy_pu": 2464.45,
+      "buy_pu": 2465.03,
       "sell_pu": 2440.87
     },
     {
@@ -256,110 +256,110 @@
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2038-12-15",
-      "buy_rate": 7.72,
-      "sell_rate": 7.84,
-      "buy_pu": 2302.19,
-      "sell_pu": 2277.63
+      "buy_rate": 7.71,
+      "sell_rate": 7.83,
+      "buy_pu": 2304.78,
+      "sell_pu": 2279.66
     },
     {
       "name": "Tesouro Educa+ 2035",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2039-12-15",
-      "buy_rate": 7.65,
-      "sell_rate": 7.77,
-      "buy_pu": 2153.35,
-      "sell_pu": 2128
+      "buy_rate": 7.64,
+      "sell_rate": 7.76,
+      "buy_pu": 2155.96,
+      "sell_pu": 2130.1
     },
     {
       "name": "Tesouro Educa+ 2036",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2040-12-15",
-      "buy_rate": 7.59,
-      "sell_rate": 7.71,
-      "buy_pu": 2014.09,
-      "sell_pu": 1988.16
+      "buy_rate": 7.58,
+      "sell_rate": 7.7,
+      "buy_pu": 2016.72,
+      "sell_pu": 1990.31
     },
     {
       "name": "Tesouro Educa+ 2037",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2041-12-15",
-      "buy_rate": 7.53,
-      "sell_rate": 7.65,
-      "buy_pu": 1885.87,
-      "sell_pu": 1859.51
+      "buy_rate": 7.54,
+      "sell_rate": 7.66,
+      "buy_pu": 1884.08,
+      "sell_pu": 1857.34
     },
     {
       "name": "Tesouro Educa+ 2038",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2042-12-15",
-      "buy_rate": 7.49,
-      "sell_rate": 7.61,
-      "buy_pu": 1763.33,
-      "sell_pu": 1736.74
+      "buy_rate": 7.5,
+      "sell_rate": 7.62,
+      "buy_pu": 1761.49,
+      "sell_pu": 1734.55
     },
     {
       "name": "Tesouro Educa+ 2039",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2043-12-15",
-      "buy_rate": 7.46,
-      "sell_rate": 7.58,
-      "buy_pu": 1647.58,
-      "sell_pu": 1620.93
+      "buy_rate": 7.47,
+      "sell_rate": 7.59,
+      "buy_pu": 1645.71,
+      "sell_pu": 1618.73
     },
     {
       "name": "Tesouro Educa+ 2040",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2044-12-15",
-      "buy_rate": 7.43,
-      "sell_rate": 7.55,
-      "buy_pu": 1540.41,
-      "sell_pu": 1513.81
+      "buy_rate": 7.44,
+      "sell_rate": 7.56,
+      "buy_pu": 1538.51,
+      "sell_pu": 1511.61
     },
     {
       "name": "Tesouro Educa+ 2041",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2045-12-15",
-      "buy_rate": 7.4,
-      "sell_rate": 7.52,
-      "buy_pu": 1441.13,
-      "sell_pu": 1414.65
+      "buy_rate": 7.41,
+      "sell_rate": 7.53,
+      "buy_pu": 1439.22,
+      "sell_pu": 1412.47
     },
     {
       "name": "Tesouro Educa+ 2042",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2046-12-15",
-      "buy_rate": 7.37,
-      "sell_rate": 7.49,
-      "buy_pu": 1349.09,
-      "sell_pu": 1322.83
+      "buy_rate": 7.39,
+      "sell_rate": 7.51,
+      "buy_pu": 1344.97,
+      "sell_pu": 1318.5
     },
     {
       "name": "Tesouro Educa+ 2043",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2047-12-15",
-      "buy_rate": 7.35,
-      "sell_rate": 7.47,
-      "buy_pu": 1261.54,
-      "sell_pu": 1235.61
+      "buy_rate": 7.37,
+      "sell_rate": 7.49,
+      "buy_pu": 1257.46,
+      "sell_pu": 1231.34
     },
     {
       "name": "Tesouro Educa+ 2044",
       "subtype": "tesouro_educa",
       "indexer": "ipca",
       "maturity_date": "2048-12-15",
-      "buy_rate": 7.34,
-      "sell_rate": 7.46,
-      "buy_pu": 1177.97,
-      "sell_pu": 1152.48
+      "buy_rate": 7.35,
+      "sell_rate": 7.47,
+      "buy_pu": 1176.08,
+      "sell_pu": 1150.38
     },
     {
       "name": "Tesouro Reserva 2036",
@@ -368,8 +368,8 @@
       "maturity_date": "2036-01-01",
       "buy_rate": 0,
       "sell_rate": 0,
-      "buy_pu": 10.898607,
-      "sell_pu": 10.898607
+      "buy_pu": 10.904238,
+      "sell_pu": 10.904238
     },
     {
       "name": "Tesouro Selic 2027",
@@ -377,9 +377,9 @@
       "indexer": "selic",
       "maturity_date": "2027-03-01",
       "buy_rate": 0,
-      "sell_rate": 0.006,
+      "sell_rate": 0.0061,
       "buy_pu": 0,
-      "sell_pu": 19721.2
+      "sell_pu": 19721.13
     },
     {
       "name": "Tesouro Selic 2028",
@@ -387,9 +387,9 @@
       "indexer": "selic",
       "maturity_date": "2028-03-01",
       "buy_rate": 0,
-      "sell_rate": 0.0203,
+      "sell_rate": 0.0204,
       "buy_pu": 0,
-      "sell_pu": 19715.76
+      "sell_pu": 19715.67
     },
     {
       "name": "Tesouro Selic 2029",
@@ -397,9 +397,9 @@
       "indexer": "selic",
       "maturity_date": "2029-03-01",
       "buy_rate": 0,
-      "sell_rate": 0.0378,
+      "sell_rate": 0.0379,
       "buy_pu": 0,
-      "sell_pu": 19703.24
+      "sell_pu": 19703.13
     },
     {
       "name": "Tesouro Prefixado com Juros Semestrais 2027",
@@ -407,9 +407,9 @@
       "indexer": "prefixado",
       "maturity_date": "2027-01-01",
       "buy_rate": 0,
-      "sell_rate": 13.55,
+      "sell_rate": 13.54,
       "buy_pu": 0,
-      "sell_pu": 1002.77
+      "sell_pu": 1002.81
     },
     {
       "name": "Tesouro Prefixado 2027",
@@ -427,9 +427,9 @@
       "indexer": "prefixado",
       "maturity_date": "2028-01-01",
       "buy_rate": 0,
-      "sell_rate": 13.95,
+      "sell_rate": 13.97,
       "buy_pu": 0,
-      "sell_pu": 838.45
+      "sell_pu": 838.25
     },
     {
       "name": "Tesouro Prefixado com Juros Semestrais 2029",
@@ -437,9 +437,9 @@
       "indexer": "prefixado",
       "maturity_date": "2029-01-01",
       "buy_rate": 0,
-      "sell_rate": 14.11,
+      "sell_rate": 14.12,
       "buy_pu": 0,
-      "sell_pu": 940.18
+      "sell_pu": 940.01
     },
     {
       "name": "Tesouro Prefixado com Juros Semestrais 2031",
@@ -457,9 +457,9 @@
       "indexer": "prefixado",
       "maturity_date": "2031-01-01",
       "buy_rate": 0,
-      "sell_rate": 14.59,
+      "sell_rate": 14.58,
       "buy_pu": 0,
-      "sell_pu": 555.13
+      "sell_pu": 555.34
     },
     {
       "name": "Tesouro Prefixado com Juros Semestrais 2033",
@@ -467,9 +467,9 @@
       "indexer": "prefixado",
       "maturity_date": "2033-01-01",
       "buy_rate": 0,
-      "sell_rate": 14.73,
+      "sell_rate": 14.71,
       "buy_pu": 0,
-      "sell_pu": 834.41
+      "sell_pu": 835.07
     },
     {
       "name": "Tesouro Prefixado com Juros Semestrais 2035",
@@ -477,9 +477,9 @@
       "indexer": "prefixado",
       "maturity_date": "2035-01-01",
       "buy_rate": 0,
-      "sell_rate": 14.75,
+      "sell_rate": 14.73,
       "buy_pu": 0,
-      "sell_pu": 802.99
+      "sell_pu": 803.75
     },
     {
       "name": "Tesouro IPCA+ 2029",
@@ -487,9 +487,9 @@
       "indexer": "ipca",
       "maturity_date": "2029-05-15",
       "buy_rate": 0,
-      "sell_rate": 8.06,
+      "sell_rate": 8.07,
       "buy_pu": 0,
-      "sell_pu": 3846.52
+      "sell_pu": 3845.56
     },
     {
       "name": "Tesouro IPCA+ com Juros Semestrais 2030",
@@ -497,9 +497,9 @@
       "indexer": "ipca",
       "maturity_date": "2030-08-15",
       "buy_rate": 0,
-      "sell_rate": 8.11,
+      "sell_rate": 8.14,
       "buy_pu": 0,
-      "sell_pu": 4433.45
+      "sell_pu": 4429.08
     },
     {
       "name": "Tesouro IPCA+ com Juros Semestrais 2032",
@@ -507,9 +507,9 @@
       "indexer": "ipca",
       "maturity_date": "2032-08-15",
       "buy_rate": 0,
-      "sell_rate": 8.08,
+      "sell_rate": 8.11,
       "buy_pu": 0,
-      "sell_pu": 4310.36
+      "sell_pu": 4304.35
     },
     {
       "name": "Tesouro IPCA+ 2035",
@@ -517,9 +517,9 @@
       "indexer": "ipca",
       "maturity_date": "2035-05-15",
       "buy_rate": 0,
-      "sell_rate": 7.97,
+      "sell_rate": 7.96,
       "buy_pu": 0,
-      "sell_pu": 2439.39
+      "sell_pu": 2441.35
     },
     {
       "name": "Tesouro IPCA+ com Juros Semestrais 2035",
@@ -527,9 +527,9 @@
       "indexer": "ipca",
       "maturity_date": "2035-05-15",
       "buy_rate": 0,
-      "sell_rate": 7.99,
+      "sell_rate": 7.98,
       "buy_pu": 0,
-      "sell_pu": 4263.32
+      "sell_pu": 4265.94
     },
     {
       "name": "Tesouro IPCA+ com Juros Semestrais 2040",
@@ -537,9 +537,9 @@
       "indexer": "ipca",
       "maturity_date": "2040-08-15",
       "buy_rate": 0,
-      "sell_rate": 7.71,
+      "sell_rate": 7.72,
       "buy_pu": 0,
-      "sell_pu": 4094.12
+      "sell_pu": 4090.61
     },
     {
       "name": "Tesouro IPCA+ 2045",
@@ -547,9 +547,9 @@
       "indexer": "ipca",
       "maturity_date": "2045-05-15",
       "buy_rate": 0,
-      "sell_rate": 7.47,
+      "sell_rate": 7.48,
       "buy_pu": 0,
-      "sell_pu": 1240.54
+      "sell_pu": 1238.39
     },
     {
       "name": "Tesouro IPCA+ com Juros Semestrais 2050",
@@ -557,9 +557,9 @@
       "indexer": "ipca",
       "maturity_date": "2050-08-15",
       "buy_rate": 0,
-      "sell_rate": 7.58,
+      "sell_rate": 7.59,
       "buy_pu": 0,
-      "sell_pu": 3963.32
+      "sell_pu": 3958.91
     },
     {
       "name": "Tesouro IPCA+ com Juros Semestrais 2055",
@@ -577,9 +577,9 @@
       "indexer": "ipca",
       "maturity_date": "2030-12-15",
       "buy_rate": 0,
-      "sell_rate": 8.03,
+      "sell_rate": 8.04,
       "buy_pu": 0,
-      "sell_pu": 3491.29
+      "sell_pu": 3490.63
     },
     {
       "name": "Tesouro IGPM+ com Juros Semestrais 2031",
@@ -587,9 +587,9 @@
       "indexer": "prefixado",
       "maturity_date": "2031-01-01",
       "buy_rate": 0,
-      "sell_rate": 8.08,
+      "sell_rate": 8.1,
       "buy_pu": 0,
-      "sell_pu": 7598.42
+      "sell_pu": 7593.48
     }
   ]
 }
