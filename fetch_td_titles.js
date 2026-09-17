@@ -17,6 +17,13 @@ const TD_API_SELL  = 'https://www.tesourodireto.com.br/o/rentabilidade/resgatar'
 const OUTPUT_FILE  = 'titulos_td.json';
 const MAX_TRIES = 3;
 
+// Abaixo disto a lista nao e a oferta normal (58-61 titulos): e o Tesouro
+// Direto com a negociacao suspensa, que deixa so Selic/Reserva no ar. Medido
+// em 17/09/2026 (dia de Copom): 2 titulos em /investir + 3 em /resgatar, e o
+// arquivo de 59 foi sobrescrito por um de 5 — quem tinha IPCA+ ou Prefixado
+// no app perdeu o PU de mercado sem aviso. Nesse caso o arquivo anterior fica.
+const MIN_TITLES = 20;
+
 function classifyTitle(name) {
   const n = name.toLowerCase();
   if (n.includes('selic')) return ['tesouro_selic', 'selic'];
@@ -153,6 +160,11 @@ async function main() {
         lastError = new Error('Nenhum título retornado pela API');
         if (attempt < MAX_TRIES) await sleep(5000);
         continue;
+      }
+
+      if (titles.length < MIN_TITLES) {
+        console.log(`[TD] So ${titles.length} titulos (minimo ${MIN_TITLES}) — negociacao provavelmente suspensa. Mantendo o arquivo anterior.`);
+        process.exit(0);
       }
 
       const output = {
