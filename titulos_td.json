@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T00:24:54.094Z",
+  "updated_at": "2026-11-24T04:05:40.491Z",
   "titles": [
     {
       "name": "Tesouro Selic 2031",
@@ -368,8 +368,8 @@
       "maturity_date": "2036-01-01",
       "buy_rate": 0,
       "sell_rate": 0,
-      "buy_pu": 11.248826,
-      "sell_pu": 11.248826
+      "buy_pu": 11.254539,
+      "sell_pu": 11.254539
     },
     {
       "name": "Tesouro Selic 2027",
